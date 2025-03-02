@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Committee</title>
+    <style>
+        .committee-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+        .committee-member {
+            width: 500px; /* Larger size */
+            text-align: center;
+        }
+        .committee-member img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px; /* Slight curve on the corners */
+        }
+        .committee-member h3 {
+            margin: 10px 0 5px;
+            font-size: 1.2em;
+        }
+        .committee-member p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+        @media (max-width: 600px) {
+            .committee-member {
+                width: 100%; /* Full width on mobile */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="committee-container">
+        <div class="committee-member">
+            <img src="contents/images/committee/4th/4.jpg" alt="Member 1">
+            <h3>Member 1</h3>
+            <p>Position</p>
+        </div>
+        <div class="committee-member">
+            <img src="contents/images/committee/4th/lfrim.jpg" alt="Member 2">
+            <h3>Member 2</h3>
+            <p>Position</p>
+        </div>
+        <div class="committee-member">
+            <img src="contents/images/committee/4th/rejoan.jpg" alt="Member 3">
+            <h3>Member 3</h3>
+            <p>Position</p>
+        </div>
+        <!-- Add more members as needed -->
+    </div>
+</body>
+
+</html>

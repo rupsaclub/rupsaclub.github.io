@@ -1,1 +1,48 @@
 <h1 style="text-align: center; padding: 40px;">Team</h1>
+
+<!-- A rounded edge card Named "4th commitee" -->
+<a href="#" onclick="loadHTML('./html/committee.html', 'main')" class="card-link">
+    <div class="card">
+        <div class="card-header">
+            <h2>4th Committee</h2>
+        </div>
+        <div class="card-body">
+            <p>The fourth committee</p>
+        </div>
+        <div class="card-footer">
+            <p>Click to see details</p>
+        </div>
+    </div>
+</a>
+
+<style>
+    .card-link {
+        text-decoration: none; /* Remove hyperlink underline */
+        color: inherit; /* Remove hyperlink tint */
+    }
+    .card {
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        transition: transform 0.2s, box-shadow 0.2s; /* Add transition for hover effect */
+    }
+    .card:hover {
+        transform: translateY(-10px); /* Hover effect to lift the card */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    }
+    .card-header {
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+
+    .card-body {
+        font-size: 1.2em;
+    }
+
+    .card-footer {
+        font-size: 1em;
+        text-align: right;
+    }
+</style>

@@ -1,22 +1,109 @@
-<!-- main.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Screen Image Slider</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/social-links.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/slideshow.css">
+    <link rel="stylesheet" href="css/posts.css">
+    <style>
+
+        
+        .slider-container {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        .slides {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            box-sizing: border-box;
+
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            box-sizing: border-box;
+
+        }
+
+        .slide img {
+            width: 100%;
+            height: auto;
+            max-height: 80%;
+            object-fit: cover;
+        }
+
+        .caption {
+            position: static;
+            font-weight: bold;
+            width: 100%;
+            font-size: 50px;
+            background-color: rgba(28, 44, 58, 0.788);
+            padding: 30px;
+            bottom: 0px;
+            font-family: 'Jost', sans-serif;
+            box-sizing: border-box;
+
+        }
+
+        .controls {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .control-btn {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 15px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background 0.3s;
+        }
+
+        .control-btn:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+
 <body>
     <div class="slider-container">
         <div class="slides">
             <div class="slide">
                 <img src="../contents/images/slideshow/photo_1_2025-02-24_21-37-01.jpg" alt="Slide 1">
-                <div class="caption">A Step Forward with Guidance and Encouragement</div>
+                <div class="caption">First Image Caption</div>
             </div>
             <div class="slide">
                 <img src="../contents/images/slideshow/photo_2_2025-02-24_21-37-01.jpg" alt="Slide 2">
-                <div class="caption">Digital Excellence: Unlocking Creativity and Efficiency</div>
+                <div class="caption">Second Image Caption</div>
             </div>
             <div class="slide">
                 <img src="../contents/images/slideshow/photo_3_2025-02-24_21-37-01.jpg" alt="Slide 3">
-                <div class="caption">মাতৃভাষার প্রতি শ্রদ্ধা, আত্মত্যাগের প্রতি কৃতজ্ঞতা!</div>
-            </div>
-            <div class="slide">
-                <img src="../contents/images/slideshow/photo_2025-02-24_21-56-10.jpg" alt="Slide 4">
-                <div class="caption">Honoring the Heroes of Our Liberation</div>
+                <div class="caption">Third Image Caption</div>
             </div>
         </div>
         <div class="controls">
@@ -24,7 +111,6 @@
             <button class="control-btn next">❯</button>
         </div>
     </div>
-
     <div class="posts">
         <div class="post">
             <img src="contents/images/posts/photo_2025-02-24_22-20-37.jpg" alt="Card 1">
@@ -120,22 +206,6 @@
         </div>
     </div>
 
-    <div style="margin-bottom: 100px; margin-top: 100px;"></div>
-
-
-    <div class="video-container">
-        <div class="video-wrapper">
-            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/DRBXGOr6faU?si=id2rnWHg-1HLtzAP"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
-        </div>
-    </div>
-
-    <!-- margin only bottom -->
-    <div style="margin-bottom: 100px; margin-top: 100px;"></div>
-
     <script>
         const slides = document.querySelector('.slides');
         const slideElements = document.querySelectorAll('.slide');
@@ -182,6 +252,8 @@
         });
 
         // Start the slider
-        // startAutoSlide();
+        startAutoSlide();
     </script>
 </body>
+
+</html>
