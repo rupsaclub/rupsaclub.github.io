@@ -1,3 +1,5 @@
+<!-- index.html -->
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,31 +17,29 @@
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/social-links.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/slideshow.css">
+    <link rel="stylesheet" href="css/posts.css">
     <title>RUPSA</title>
 </head>
 
 <body>
     <div class="site">
-        <nav class="nav">
-            <li style="padding: 1em;"><a href="#" onclick="loadHTML('./html/main.html', 'main')">HOME</a>
-            </li>
-            <li style="padding: 1em;"><a href="#" onclick="loadHTML('./html/about.html', 'main')">ABOUT</a>
-            </li>
-            <li style="padding: 1em;"><a href="#" onclick="loadHTML('./html/team.html', 'main')">TEAM</a>
-            </li>
-            <li style="padding: 1em;"><a href="#" onclick="loadHTML('./html/events.html', 'main')">EVENTS</a>
-            </li>
-            <li style="padding: 1em;"><a href="#"
-                    onclick="loadHTML('./html/publications.html', 'main')">PUBLICATIONS</a>
-            </li>
-            <li style="padding: 1em;"><a href="#" onclick="loadHTML('./html/donate.html', 'main')">DONATE</a>
-            </li>
-            <li style="padding: 1em;"><a href="#" onclick="loadHTML('./html/contact.html', 'main')">CONTACT
-                    US</a>
-            </li>
-        </nav>
+        <header>
+            <li class="nav-title">RUPSA</li>
+            <button class="hamburger" aria-label="Toggle menu">☰</button>
+            <nav class="nav">
+                <li><a href="#" onclick="loadHTML('./html/main.html', 'main')">HOME</a></li>
+                <li><a href="#" onclick="loadHTML('./html/about.html', 'main')">ABOUT</a></li>
+                <li><a href="#" onclick="loadHTML('./html/team.html', 'main')">TEAM</a></li>
+                <li><a href="#" onclick="loadHTML('./html/events.html', 'main')">EVENTS</a></li>
+                <li><a href="#" onclick="loadHTML('./html/publications.html', 'main')">PUBLICATIONS</a></li>
+                <li><a href="#" onclick="loadHTML('./html/donate.html', 'main')">DONATE</a></li>
+                <li><a href="#" onclick="loadHTML('./html/contact.html', 'main')">CONTACT US</a></li>
+            </nav>
+        </header>
 
-        <!-- Content that will change based on the click -->
+        <div style="height: 60px;"></div>
         <div id="main"></div>
         <footer id="footer">
             <!-- Social Media Links -->
@@ -66,21 +66,41 @@
                 </details>
             </div>
             <div class="footer-content">
-                <p style="max-width: 70%; margin: 0 auto;">Rajshahi University Philosophy Student Alliance (RUPSA) is a
-                    student oriented non-profit and non-political voluntary organization initiated by the students of
-                    Philosophy Department with a motto of "United to Ignite"</p>
-                <p style="font-size: 1em; padding: 15px; text-align: center;"> <a href="privacy.html"
-                        style="color: #ffffff; text-decoration: none; margin: 0 10px;">Privacy Policy</a> <a
-                        href="terms.html" style="color: #ffffff; text-decoration: none; margin: 0 10px;">Terms of
-                        Service</a> <a href="about.html"
-                        style="color: #ffffff; text-decoration: none; margin: 0 10px;">About Us</a> <a
-                        href="contact.html" style="color: #ffffff; text-decoration: none; margin: 0 10px;">Contact</a>
+                <p>Rajshahi University Philosophy Student Alliance (RUPSA) is a student oriented non-profit and
+                    non-political voluntary organization initiated by the students of Philosophy Department with a motto
+                    of "United to Ignite"</p>
+                <p>
+                    <a href="privacy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="about.html">About Us</a>
+                    <a href="contact.html">Contact</a>
                 </p>
             </div>
-            <div style="text-align: center; background-color: #000000; color: #ffffff; padding: 15px 15px 15px 0;">
-                Copyright &copy; 2025 RUPSA. All rights reserved.
-            </div>
         </footer>
+        <div class="copyright">
+            Copyright © 2025 RUPSA. All rights reserved.
+        </div>
+        <style>
+            .nav-title {
+                display: none;
+                text-align: center;
+                font-size: 1.5em;
+                font-weight: bold;
+            
+            }
+            @media (max-width: 768px) {
+                .nav-title {
+                    display: block;
+                    width: 100%;
+                }
+            }
+            @media (min-width: 769px) {
+                .nav-title {
+                    display: block;
+                    text-align: left;
+                }
+            }
+        </style>
         <script src="app.js"></script>
     </div>
 </body>
