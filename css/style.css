@@ -14,9 +14,12 @@
 } */
 
 .site {
-    min-height: 100vh; /* Ensures the container spans the full viewport height */
-    display: flex; /* Switch from grid to flex */
-    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh;
+    /* Ensures the container spans the full viewport height */
+    display: flex;
+    /* Switch from grid to flex */
+    flex-direction: column;
+    /* Stack children vertically */
     background-color: #f0fbff;
     /* width: 100%; Ensure it doesn’t exceed viewport */
 }
@@ -26,7 +29,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #fff;
+    background-color: aqua;
     z-index: 1100;
     display: flex;
     align-items: center;
@@ -59,7 +62,7 @@ header {
     justify-content: center;
     margin: 0;
     padding: 0;
-    background-color: #fff;
+    background-color: aqua;
     z-index: 1000;
 }
 

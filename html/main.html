@@ -1,5 +1,23 @@
 <!-- main.html -->
+
 <body>
+    <style>
+        @media (min-width: 1024px) {
+            .content {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                /* Full viewport height */
+            }
+
+            .content p {
+                width: 50%;
+                margin: 0;
+            }
+        }
+    </style>
+
     <div class="slider-container">
         <div class="slides">
             <div class="slide">
@@ -24,6 +42,25 @@
             <button class="control-btn next">❯</button>
         </div>
     </div>
+
+    <div style="text-align: center; font-size: 64px; background-color: aqua;">Content</div>
+    <div class="content">
+        <p style="text-align: justify; margin: 20px; font-size: 24px; text-align: center;">
+            <img src="contents/images/logo.jpg" alt="RUPSA Logo" style="height: 80px;">
+            <br><br>
+            <span style="font-weight: bold; font-size: 64px;">RUPSA</span>
+            <br><br>
+            <span style="font-weight: bold; font-size: 32px;">Rajshahi University Philosophy Student Alliance</span>
+            <br><br>
+            Welcome to RUPSA. RUPSA is a student oriented non-profit and non-political
+            voluntary organisation initiated by the students of Philosophy Department.
+            <br><br>
+            Our motto is "united to ignite."
+        </p>
+    </div>
+
+
+    <div style="text-align: center; font-size: 64px; background-color: aqua;">Posts</div>
 
     <div class="posts">
         <div class="post">
@@ -120,6 +157,8 @@
         </div>
     </div>
 
+
+
     <div style="margin-bottom: 100px; margin-top: 100px;"></div>
 
 
@@ -182,6 +221,8 @@
         });
 
         // Start the slider
-        // startAutoSlide();
+        startAutoSlide();
     </script>
 </body>
+
+</html>
