@@ -1,4 +1,3 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +16,7 @@
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/social-links.css">
-    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
     <link rel="stylesheet" href="css/slideshow.css">
     <link rel="stylesheet" href="css/posts.css">
     <link rel="icon" href="contents/images/logo.jpg" type="image/jpeg">
@@ -30,13 +29,12 @@
             <li class="nav-title">
                 <img src="contents/images/logo.jpg" alt="RUPSA Logo" style="height: 50px;">
             </li>
-            <button class="hamburger" aria-label="Toggle menu">☰</button>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
             <nav class="nav">
                 <li><a href="#" onclick="loadHTML('./html/main.html', 'main')">HOME</a></li>
                 <li><a href="#" onclick="loadHTML('./html/about.html', 'main')">ABOUT</a></li>
-                <li>
-                    <a href="#">TEAM</a>
-                    <!-- <a href="#" onclick="loadHTML('./html/team.html', 'main')">TEAM</a> -->
+                <li class="team-item">
+                    <a href="#" onclick="toggleDropdown(event)" aria-expanded="false" class="team-link">TEAM</a>
                     <ul class="dropdown">
                         <li><a href="#" onclick="loadHTML('./html/committee_4th.html', 'main')">4th Committee</a></li>
                         <li><a href="#" onclick="loadHTML('./html/committee_4thW.html', 'main')">4th Extended Committee</a></li>
@@ -46,7 +44,7 @@
                     </ul>
                 </li>
                 <li><a href="#" onclick="loadHTML('./html/events.html', 'main')">EVENTS</a></li>
-                <li><a href="#" onclick="loadHTML('./html/publications.html', 'main')">PUBLICATIONS</a></li>
+                <li><a href="#" onclick="loadHTML('./html/faqs.html', 'main')">FAQs</a></li>
                 <li><a href="#" onclick="loadHTML('./html/donate.html', 'main')">DONATE</a></li>
                 <li><a href="#" onclick="loadHTML('./html/contact.html', 'main')">CONTACT US</a></li>
             </nav>
@@ -56,10 +54,11 @@
         <div id="main"></div>
         <footer id="footer">
             <!-- Social Media Links -->
-            <div style="justify-content: center; display: flex;"><a class="icon-button"
-                    href="https://www.facebook.com/share/1BBfNa76xf/" target="_blank">
+            <div style="justify-content: center; display: flex;">
+                <a class="icon-button" href="https://www.facebook.com/share/1BBfNa76xf/" target="_blank">
                     <div class="circle"></div> <i class="icon bi bi-facebook large"></i>
-                </a><a class="icon-button" href="https://youtube.com/@rupsarubd?si=HdUlJIZFzgN28Ple" target="_blank">
+                </a>
+                <a class="icon-button" href="https://youtube.com/@rupsarubd?si=HdUlJIZFzgN28Ple" target="_blank">
                     <div class="circle"></div> <i class="icon bi bi-youtube large"></i>
                 </a>
                 <details>
@@ -69,12 +68,9 @@
                         </div>
                     </summary>
                     <ul>
-                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=bdrupsa@gmail.com">Gmail</a>
-                        </li>
-                        <li><a href="https://compose.mail.yahoo.com/?to=bdrupsa@gmail.com">Yahoo Mail</a>
-                        </li>
-                        <li><a href="https://outlook.office.com/mail/deeplink/compose?to=bdrupsa@gmail.com">Outlook</a>
-                        </li>
+                        <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=bdrupsa@gmail.com">Gmail</a></li>
+                        <li><a href="https://compose.mail.yahoo.com/?to=bdrupsa@gmail.com">Yahoo Mail</a></li>
+                        <li><a href="https://outlook.office.com/mail/deeplink/compose?to=bdrupsa@gmail.com">Outlook</a></li>
                     </ul>
                 </details>
             </div>
@@ -92,59 +88,9 @@
         <div class="copyright">
             Copyright © 2025 RUPSA. All rights reserved.
         </div>
-        <style>
-            .nav-title {
-                display: none;
-                text-align: center;
-                font-size: 1.5em;
-                font-weight: bold;
-            
-            }
-            @media (max-width: 768px) {
-                .nav-title {
-                    display: block;
-                    width: 100%;
-                }
-            }
-            @media (min-width: 769px) {
-                .nav-title {
-                    display: block;
-                    text-align: left;
-                }
-            }
 
-            /* Dropdown menu styles */
-            .dropdown {
-                display: none;
-                position: absolute;
-                background-color: #f9f9f9;
-                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-                z-index: 1;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-
-            .nav li:hover .dropdown {
-                display: block;
-            }
-
-            .dropdown li {
-                padding: 8px 16px;
-            }
-
-            .dropdown li a {
-                text-decoration: none;
-                color: inherit;
-                display: block;
-            }
-
-            .dropdown li a:hover {
-                background-color: #ddd;
-            }
-        </style>
+        <!-- JavaScript -->
         <script src="app.js"></script>
     </div>
 </body>
-
 </html>

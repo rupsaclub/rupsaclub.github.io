@@ -1,4 +1,3 @@
-
 <h1 style="text-align: center; padding: 40px;">About</h1>
 
 <div class="container">
@@ -67,6 +66,7 @@ Through these initiatives, we encourage the holistic development of our membersâ
         display: flex;
         justify-content: space-between;
         margin-bottom: 20px;
+        flex-wrap: wrap; /* Allow wrapping for smaller screens */
     }
     .col-md-6 {
         width: 48%;
@@ -82,5 +82,13 @@ Through these initiatives, we encourage the holistic development of our membersâ
     p {
         font-size: 1.2em;
         color: #777;
+    }
+
+    /* Add responsive styles for mobile view */
+    @media (max-width: 768px) {
+        .col-md-6 {
+            width: 100%; /* Full width for single column layout */
+            margin-bottom: 20px; /* Add spacing between columns */
+        }
     }
 </style>
