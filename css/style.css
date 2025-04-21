@@ -20,7 +20,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: aqua;
+    background-color: #0ca7d5;
     z-index: 1100;
     display: flex;
     align-items: center;
@@ -36,7 +36,7 @@ header {
     border: none;
     cursor: pointer;
     padding: 0 1em;
-    color: #333;
+    /* color: #333; */
     z-index: 1200;
     position: absolute;
     left: 0;
@@ -52,7 +52,7 @@ header {
     justify-content: center;
     margin: 0;
     padding: 0;
-    background-color: aqua;
+    background-color: #0ca7d5;
     z-index: 1000;
 }
 
@@ -63,7 +63,7 @@ header {
 
 .nav a {
     text-decoration: none;
-    color: #333;
+    color: #000000;
     font-family: 'Jost', sans-serif;
 }
 
