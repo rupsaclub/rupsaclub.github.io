@@ -30,6 +30,19 @@
                 <img src="contents/images/logo.png" alt="RUPSA Logo" style="height: 50px;">
             </li>
             <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+            <style>
+                @media (min-width: 768px) {
+                    .hamburger {
+                        display: none !important;
+                    }
+                }
+
+                @media (max-width: 767px) {
+                    .hamburger {
+                        display: inline-block !important;
+                    }
+                }
+            </style>
             <nav class="nav">
                 <li><a href="#" onclick="loadHTML('./html/main.html', 'main')">HOME</a></li>
                 <li><a href="#" onclick="loadHTML('./html/about.html', 'main')">ABOUT</a></li>
@@ -37,9 +50,11 @@
                     <a href="#" onclick="toggleDropdown(event)" aria-expanded="false" class="team-link">TEAM</a>
                     <ul class="dropdown">
                         <li><a href="#" onclick="loadHTML('./html/committee_4th.html', 'main')">4th Committee</a></li>
-                        <li><a href="#" onclick="loadHTML('./html/committee_4thW.html', 'main')">4th Extended Committee</a></li>
+                        <li><a href="#" onclick="loadHTML('./html/committee_4thW.html', 'main')">4th Extended
+                                Committee</a></li>
                         <li><a href="#" onclick="loadHTML('./html/committee_3rd.html', 'main')">3rd Committee</a></li>
-                        <li><a href="#" onclick="loadHTML('./html/committee_3rdW.html', 'main')">3rd Extended Committee</a></li>
+                        <li><a href="#" onclick="loadHTML('./html/committee_3rdW.html', 'main')">3rd Extended
+                                Committee</a></li>
                         <li><a href="#" onclick="loadHTML('./html/committee_2nd.html', 'main')">2nd Committee</a></li>
                     </ul>
                 </li>
@@ -70,7 +85,8 @@
                     <ul>
                         <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=bdrupsa@gmail.com">Gmail</a></li>
                         <li><a href="https://compose.mail.yahoo.com/?to=bdrupsa@gmail.com">Yahoo Mail</a></li>
-                        <li><a href="https://outlook.office.com/mail/deeplink/compose?to=bdrupsa@gmail.com">Outlook</a></li>
+                        <li><a href="https://outlook.office.com/mail/deeplink/compose?to=bdrupsa@gmail.com">Outlook</a>
+                        </li>
                     </ul>
                 </details>
             </div>
@@ -93,4 +109,5 @@
         <script src="app.js"></script>
     </div>
 </body>
+
 </html>
