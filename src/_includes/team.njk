@@ -1,0 +1,41 @@
+---
+layout: base.njk
+---
+{% if images %}
+<h1 style="text-align: center; padding: 80px; ">{{ title }}</h1>
+<div class="team-gallery-container" style="margin-top:24px;">
+    <div class="committee-gallery">
+        {% for image in images %}
+        <div class="committee-member">
+            <img src="{{ image }}" alt="{{ title }} image">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<style>
+    .committee-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .committee-member {
+        width: 500px;
+        text-align: center;
+    }
+
+    .committee-member img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    @media (max-width: 600px) {
+        .committee-member {
+            width: 100%;
+        }
+    }
+</style>
+{% endif %}

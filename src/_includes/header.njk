@@ -1,0 +1,69 @@
+<link rel="stylesheet" href="/css/header.css">
+<header>
+    <div class="nav-title">
+        <img src="/contents/images/logo.png" alt="RUPSA Logo">
+    </div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="nav">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/about/">ABOUT</a></li>
+        <li class="team-item">
+            <a href="javascript:void(0)" class="team-link" aria-expanded="false">TEAM</a>
+            <ul class="dropdown">
+                <li><a href="/committee/4th/">4th Committee</a></li>
+                <li><a href="/committee/4thW/">4th Extended Committee</a></li>
+                <li><a href="/committee/3rd/">3rd Committee</a></li>
+                <li><a href="/committee/3rdW">3rd Extended Committee</a></li>
+                <li><a href="/committee/2nd">2nd Committee</a></li>
+            </ul>
+        </li>
+        <li><a href="/advisory/">ADVISORY PANEL</a></li>
+        <li><a href="/events/">EVENTS</a></li>
+        <li><a href="/faqs/">FAQs</a></li>
+        <li><a href="/donate/">DONATE</a></li>
+        <li><a href="/contact/">CONTACT</a></li>
+    </ul>
+</header>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+        const teamLink = document.querySelector('.team-link');
+        const dropdown = document.querySelector('.dropdown');
+
+        // Hamburger menu toggle
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', nav.classList.contains('active'));
+        });
+
+        // Team dropdown toggle on mobile
+        teamLink.addEventListener('click', (e) => {
+            if (window.innerWidth <= 767) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+                teamLink.setAttribute('aria-expanded', dropdown.classList.contains('active'));
+            }
+        });
+
+        // Close dropdown and nav when clicking a nav link on mobile
+        document.querySelectorAll('.nav a:not(.team-link)').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 767) {
+                    nav.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    dropdown.classList.remove('active');
+                    teamLink.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.team-item') && !e.target.closest('.dropdown')) {
+                dropdown.classList.remove('active');
+                teamLink.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+</script>

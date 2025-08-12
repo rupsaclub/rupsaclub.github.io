@@ -1,0 +1,90 @@
+---
+layout: base.njk
+title: All Events
+permalink: /events/
+---
+<h1 style="text-align: center; padding: 80px; ">{{ title }}</h1>
+
+<div class="event-list">
+  {% for event in collections.events %}
+  <div class="event">
+    {% if event.data.images and event.data.images[0] %}
+    <img src="{{ event.data.featured }}" alt="{{ event.data.title }} image">
+    {% endif %}
+    <div class="event-content">
+      <h2><a href="{{ event.url }}">{{ event.data.title }}</a></h2>
+      <!-- <p>Date: {{ event.data.date }}</p> -->
+      <p>{{ event.data.description }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<style>
+  .event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 20px;
+  }
+
+  .event {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .event:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .event-content {
+    padding: 1.5rem;
+  }
+
+  .event h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem;
+    color: #333;
+  }
+
+  .event h2 a {
+    color: #2b6cb0;
+    text-decoration: none;
+  }
+
+  .event h2 a:hover {
+    color: #1a4971;
+    text-decoration: underline;
+  }
+
+  .event p {
+    margin: 0 0 0.75rem;
+    color: #555;
+    font-size: 0.9rem;
+  }
+
+  .event img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .event-list {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .event h2 {
+      font-size: 1.1rem;
+    }
+
+    .event img {
+      height: 120px;
+    }
+  }
+</style>
