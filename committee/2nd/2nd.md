@@ -1,0 +1,49 @@
+---
+layout: team.njk
+title: 2nd Committee
+images:
+  - /committee/2nd/1.jpg
+  - /committee/2nd/2.jpg
+  - /committee/2nd/3.jpg
+  - /committee/2nd/4.jpg
+  - /committee/2nd/5.jpg
+  - /committee/2nd/6.jpg
+  - /committee/2nd/7.jpg
+  - /committee/2nd/8.jpg
+  - /committee/2nd/9.jpg
+  - /committee/2nd/10.jpg
+  - /committee/2nd/11.jpg
+  - /committee/2nd/12.jpg
+  - /committee/2nd/13.jpg
+  - /committee/2nd/14.jpg
+  - /committee/2nd/15.jpg
+  - /committee/2nd/16.jpg
+  - /committee/2nd/17.jpg
+  - /committee/2nd/18.jpg
+  - /committee/2nd/19.jpg
+  - /committee/2nd/20.jpg
+  - /committee/2nd/21.jpg
+  - /committee/2nd/22.jpg
+  - /committee/2nd/23.jpg
+  - /committee/2nd/24.jpg
+  - /committee/2nd/25.jpg
+  - /committee/2nd/26.jpg
+  - /committee/2nd/27.jpg
+  - /committee/2nd/28.jpg
+  - /committee/2nd/29.jpg
+  - /committee/2nd/30.jpg
+  - /committee/2nd/31.jpg
+  - /committee/2nd/32.jpg
+  - /committee/2nd/33.jpg
+  - /committee/2nd/34.jpg
+  - /committee/2nd/35.jpg
+  - /committee/2nd/36.jpg
+  - /committee/2nd/37.jpg
+  - /committee/2nd/38.jpg
+  - /committee/2nd/39.jpg
+  - /committee/2nd/40.jpg
+  - /committee/2nd/41.jpg
+  - /committee/2nd/42.jpg
+  - /committee/2nd/43.jpg
+---
+sss
