@@ -10,7 +10,7 @@ images:
   - /events/3rdEC/Career Adda 2.0/IMG_20240928_194052.avif
   - /events/3rdEC/Career Adda 2.0/IMG_20240928_194143.avif
   - /events/3rdEC/Career Adda 2.0/IMG_20240928_194205.avif
-  - /events/3rdEC/Career Adda 2..0/IMG_20240928_194233.avif
+  - /events/3rdEC/Career Adda 2.0/IMG_20240928_194233.avif
   - /events/3rdEC/Career Adda 2.0/IMG_20240928_194301.avif
   - /events/3rdEC/Career Adda 2.0/IMG_20240928_194333.avif
   - /events/3rdEC/Career Adda 2.0/IMG_20240928_194354.avif
