@@ -7,6 +7,42 @@ permalink: /events/
 
 <div class="event-list">
   {% for event in collections.events %}
+    {% if '2nd EC' not in event.data.tags and '3rd EC' not in event.data.tags %}
+      <div class="event">
+        {% if event.data.images and event.data.images[0] %}
+        <img src="{{ event.data.featured }}" alt="{{ event.data.title }} image">
+        {% endif %}
+        <div class="event-content">
+          <h2><a href="{{ event.url }}">{{ event.data.title }}</a></h2>
+          <!-- <p>Date: {{ event.data.date }}</p> -->
+          <p>{{ event.data.description }}</p>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<h1 style="text-align: center; padding: 80px; ">3rd Executive Committee Events</h1>
+
+<div class="event-list">
+  {% for event in collections.events_3rdEC %}
+  <div class="event">
+    {% if event.data.images and event.data.images[0] %}
+    <img src="{{ event.data.featured }}" alt="{{ event.data.title }} image">
+    {% endif %}
+    <div class="event-content">
+      <h2><a href="{{ event.url }}">{{ event.data.title }}</a></h2>
+      <!-- <p>Date: {{ event.data.date }}</p> -->
+      <p>{{ event.data.description }}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+<h1 style="text-align: center; padding: 80px; ">2nd Executive Committee Events</h1>
+
+<div class="event-list">
+  {% for event in collections.events_2ndEC %}
   <div class="event">
     {% if event.data.images and event.data.images[0] %}
     <img src="{{ event.data.featured }}" alt="{{ event.data.title }} image">
@@ -68,7 +104,7 @@ permalink: /events/
 
   .event img {
     width: 100%;
-    height: 150px;
+    max-height: 200px;
     object-fit: cover;
     display: block;
   }
@@ -83,8 +119,8 @@ permalink: /events/
       font-size: 1.1rem;
     }
 
-    .event img {
+    /* .event img {
       height: 120px;
-    }
+    } */
   }
 </style>

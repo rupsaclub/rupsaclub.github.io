@@ -23,8 +23,6 @@ images:
     - /events/event8/480883992_938099575100032_8850353666586762636_n.jpg 
     - /events/event8/480893840_938099531766703_7007920629858143569_n.jpg
 
-slug: event8
-permalink: /events/{{ slug }}/
 tags: events
 ---
 Rajshahi University Philosophy Students' Alliance (RUPSA) invites you to join our upcoming weekly session!

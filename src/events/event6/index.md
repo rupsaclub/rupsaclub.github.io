@@ -11,8 +11,6 @@ images:
 
 
 
-slug: event6
-permalink: /events/{{ slug }}/
 tags: events
 ---
 🎤 Step Into Your Power with RUPSA! 🎤

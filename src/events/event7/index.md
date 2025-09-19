@@ -16,8 +16,6 @@ images:
     - /events/event7/481112217_943017814608208_3788189345301549745_n.jpg 
     - /events/event7/481473118_943017301274926_2961020308840926234_n.jpg
 
-slug: event7
-permalink: /events/{{ slug }}/
 tags: events
 ---
 🌟 Join Us for an Inspiring Session! 🌟 

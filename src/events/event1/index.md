@@ -21,8 +21,6 @@ images:
   - /events/event1/527720754_1056683203241668_1607072045291030830_n.jpg
   - /events/event1/527776547_1056692566574065_9043913641772172481_n.jpg 
 
-slug: event1
-permalink: /events/{{ slug }}/
 tags: events
 ---
 📘 RUPSA Weekly Session Announcement! 

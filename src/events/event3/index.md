@@ -13,8 +13,6 @@ images:
  - /events/event3/510450124_1024890296420959_2030780245402936661_n.jpg 
  - /events/event3/510969814_1024890069754315_5582749813967386802_n.jpg
 
-slug: event3
-permalink: /events/{{ slug }}/
 tags: events
 ---
 From Understanding to Speaking – Break the Barrier

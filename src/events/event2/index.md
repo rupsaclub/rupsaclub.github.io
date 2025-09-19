@@ -20,8 +20,6 @@ images:
   - /events/event2/2025-08-01_17.13.17.jpg 
   - /events/event2/2025-08-01_17.13.23.jpg 
   - /events/event2/2025-08-01_17.13.26.jpg
-slug: event2
-permalink: /events/{{ slug }}/
 tags: events
 ---
 
