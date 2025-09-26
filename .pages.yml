@@ -2,7 +2,7 @@ content:
   - name: events
     label: Events
     path: src/events
-    filename: '{fields.date|date:YYYY-MM-DD}-{fields.title}.md'
+    filename: '{fields.title}/index.md'
     type: collection
     view:
       fields: [title, date, tags]
@@ -18,26 +18,34 @@ content:
         label: Event Date
         type: date
         options:
-          format: YYYY-MM-DD
+          format: yyyy-MM-dd
       - name: description
         label: Description
         type: text
       - name: featured
         label: Featured Image
         type: image
-        multiple: true
+        options:
+          path: .
+          multiple: false
       - name: images
         label: Additional Images
         type: image
-        multiple: true
+        options:
+          path: .
+          # Or if you want to limit the number of images:
+          multiple:
+            max: 20
       - name: tags
         label: Tags
-        type: string
+        type: select
         options:
           values: ["2nd EC", "3rd EC", "4th EC", "5th EC"]
+          multiple: false
+          creatable: true
       - name: body
         label: Event Details
         type: rich-text
 media:
-  input: src/contents/images
-  output: /contents/images
+  input: src/events
+  output: /events
