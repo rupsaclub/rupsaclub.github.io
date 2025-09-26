@@ -2,7 +2,7 @@ This document provides a detailed overview of the `rupsaclub` project, intended 
 
 ## 1. Project Overview
 
-- **URL (if deployed):** finally the website should be at https://github.com/BSCF24/bscf24.github.io
+- **URL (if deployed):** finally the website should be at https://github.com/rupsaclub/rupsaclub.github.io
 - **Repository:** The project is managed in a Git repository. Current remote location is unidentified.
 
 ## 2. Technologies Used
