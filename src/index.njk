@@ -8,20 +8,13 @@ title: Index
 <div class="slider-container">
     <div class="slides">
         <div class="slide">
-            <img src="../contents/images/slideshow/photo_1_2025-02-24_21-37-01.jpg" alt="Slide 1">
-            <div class="caption">A Step Forward with Guidance and Encouragement</div>
+            <img src="/contents/images/slideshow/s1.jpg" alt="Slide 1">
         </div>
         <div class="slide">
-            <img src="../contents/images/slideshow/photo_2_2025-02-24_21-37-01.jpg" alt="Slide 2">
-            <div class="caption">Digital Excellence: Unlocking Creativity and Efficiency</div>
+            <img src="/contents/images/slideshow/s2.jpg" alt="Slide 2">
         </div>
         <div class="slide">
-            <img src="../contents/images/slideshow/photo_3_2025-02-24_21-37-01.jpg" alt="Slide 3">
-            <div class="caption">মাতৃভাষার প্রতি শ্রদ্ধা, আত্মত্যাগের প্রতি কৃতজ্ঞতা!</div>
-        </div>
-        <div class="slide">
-            <img src="../contents/images/slideshow/photo_2025-02-24_21-56-10.jpg" alt="Slide 4">
-            <div class="caption">Honoring the Heroes of Our Liberation</div>
+            <img src="/contents/images/slideshow/s3.jpg" alt="Slide 3">
         </div>
     </div>
     <div class="controls">
@@ -30,7 +23,7 @@ title: Index
     </div>
 </div>
 
-<div style="text-align: center; font-size: 42px; background-color: #0ca7d5; padding: 8px 0;">Content</div>
+
 <div class="content">
     <p style="text-align: justify; margin: 20px; font-size: 24px; text-align: center;">
         <img src="contents/images/logo.png" alt="RUPSA Logo" style="height: 80px;">
@@ -47,121 +40,34 @@ title: Index
 </div>
 
 
-<div style="text-align: center; font-size: 42px; background-color: #0ca7d5; padding: 8px 0;">Posts</div>
-<div class="posts">
-    <div class="post">
-        <img src="contents/images/posts/photo_2025-02-24_22-20-37.jpg" alt="Card 1">
-        <div class="post-text">
-            <h3>Congratulations to Md. Shahduduj Zaman!</h3>
-            <p>
-                Heartiest Congratulations to Our Alumnus, Md. Shahduduj Zaman!
-                The Rajshahi University Philosophy Students' Alliance (RUPSA) is delighted to share the wonderful
-                news
-                that our esteemed alumnus, Md. Shahduduj Zaman, has recently joined as a Lecturer in the Department
-                of
-                Philosophy at Joypurhat Government College.
+<div style="text-align: center; font-size: 42px; background-color: #0ca7d5; padding: 8px 0;">Recent Events</div>
 
-                Md. Shahduduj Zaman, a proud pupil of Batch-63 of the Department of Philosophy , University of
-                Rajshahi,
-                has always stood out for his dedication and academic excellence.
-
-                His incredible achievement of securing 2nd position in the Education Cadre (Philosophy) in the BCS
-                Examination further highlights his brilliance and unwavering commitment to the field.
-
-                This remarkable milestone is a source of pride not only for him but also for all of us at RUPSA. We
-                are
-                confident that his wisdom and passion for teaching will inspire and enlighten countless students in
-                the
-                years to come.
-
-                Once again, congratulations on this well-deserved success! We wish you all the best as you embark on
-                this exciting new chapter of your journey.
-
-                Warm regards,
-                Team RUPSA
-            </p>
+<div class="event-list">
+    {% set counter = 0 %}
+    {% for event in collections.events_4thEC %}
+    {% if counter < 4 %}
+    <div class="event">
+        {% if event.data.images and event.data.images[0] %}
+        <img src="{{ event.data.featured[0] }}" alt="{{ event.data.title }} image">
+        {% endif %}
+        <div class="event-content">
+            <h2><a href="{{ event.url }}">{{ event.data.title }}</a></h2>
+            <!-- <p>Date: {{ event.data.date }}</p> -->
+            <p>{{ event.data.description }}</p>
         </div>
     </div>
-    <div class="post">
-        <img src="contents/images/posts/photo_2025-02-24_22-23-35.jpg" alt="Card 2">
-        <div class="post-text">
-            <h3>#RememberingDrZoha</h3>
-            <p>
-                On this day, we remember Dr. Mohammad Shamsuzzoha, the first university teacher in Bangladesh to
-                sacrifice his life for the cause of justice.
-
-                On February 18, 1969, he stood in solidarity with protesting students and was tragically shot while
-                trying to protect them.
-
-                His bravery became a catalyst for the mass uprising that ultimately led to our independence.
-
-                Dr. Zoha's legacy reminds us of the enduring power of courage and sacrifice in the fight for truth
-                and
-                justice.
-
-                #RememberingDrZoha
-
-                #RUPSA
-
-                #LegacyOfSacrifice
-
-                #RajshahiUniversity
-            </p>
-        </div>
-    </div>
-    <div class="post">
-        <img src="contents/images/posts/photo_2025-02-24_22-20-18.jpg" alt="Card 3">
-        <div class="post-text">
-            <h3>শ্রদ্ধা, সংগ্রাম, আর গৌরবের এক অনন্য অধ্যায়—২১শে ফেব্রুয়ারি!</h3>
-            <p>
-
-                আন্তর্জাতিক মাতৃভাষা দিবসে রূপসা শ্রদ্ধা জানাচ্ছে ভাষা শহীদদের, যাঁদের আত্মত্যাগ আমাদের ভাষার অধিকার
-                নিশ্চিত করেছে। মাতৃভাষার মর্যাদা রক্ষার এই আন্দোলন আমাদের জাতীয় চেতনার মূল ভিত্তি, যা আজও মুক্ত
-                চিন্তা ও
-                সাংস্কৃতিক বৈচিত্র্যের প্রতীক হয়ে আছে।
-
-                আসুন, মাতৃভাষার প্রতি শ্রদ্ধা জানিয়ে নিজ ভাষাকে ভালোবাসি, চর্চা করি এবং বিশ্বমঞ্চে তুলে ধরি।
-
-                "আমার ভাইয়ের রক্তে রাঙানো একুশে ফেব্রুয়ারি, আমি কি ভুলিতে পারি?"
-
-                #InternationalMotherLanguageDay #একশেরচেতনায় #মাতৃভাষারগৌরব</p>
-        </div>
-    </div>
-    <div class="post">
-        <img src="contents/images/posts/photo_2025-02-24_22-20-31.jpg" alt="Card 3">
-        <div class="post-text">
-            <h3>মাতৃভাষার প্রতি শ্রদ্ধা, আত্মত্যাগের প্রতি কৃতজ্ঞতা!</h3>
-            <p>
-                আমরা গভীর শ্রদ্ধার সঙ্গে উদযাপন করেছি আন্তর্জাতিক মাতৃভাষা দিবস ২০২৫। ভাষা শহীদদের স্মরণে আলোচনা,
-                সাংস্কৃতিক পরিবেশনা ও শ্রদ্ধাঞ্জলির মাধ্যমে আমরা এদিনের তাৎপর্যকে নতুন করে উপলব্ধি করেছি।
-
-                "একুশ মানে মাথা নত না করা!"
-                আসুন, মাতৃভাষার মর্যাদা রক্ষা করি এবং সকল ভাষার প্রতি শ্রদ্ধাশীল হই।
-
-                #InternationalMotherLanguageDay #একশেরচেতনায় #ভাষারঅধিকার</p>
-        </div>
-    </div>
+    {% set counter = counter + 1 %}
+    {% endif %}
+    {% endfor %}
 </div>
 
 
 
-<div style="margin-bottom: 100px; margin-top: 100px;"></div>
+<!-- <div style="margin-bottom: 100px; margin-top: 100px;"></div> -->
 
-
-<!-- <div class="video-container">
-        <div class="video-wrapper">
-            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/DRBXGOr6faU?si=id2rnWHg-1HLtzAP"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-            </iframe>
-        </div>
-    </div> -->
-
-<!-- margin only bottom -->
 
 <div style="text-align: center; font-size: 42px; background-color: #0ca7d5; padding: 8px 0;">Achievements</div>
-<div style="margin-bottom: 100px; margin-top: 100px;"></div>
+<div style="margin-bottom: 10px; margin-top: 10px;"></div>
 
 <div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
     <img src="../contents/images/achievements/1.jpg" alt="a 1" style="max-width: 300px; height: auto;">
@@ -175,10 +81,28 @@ title: Index
     <img src="../contents/images/achievements/9.jpg" alt="a 9" style="max-width: 300px; height: auto;">
 </div>
 
-<div style="margin-bottom: 100px; margin-top: 100px;"></div>
+<div style="margin-bottom: 10px; margin-top: 10px;"></div>
 
 
 <style>
+    .content {
+        position: relative;
+        z-index: 1;
+    }
+    .content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/contents/images/slideshow/front_blur.jpg');
+        background-size: cover;
+        background-position: center;
+        filter: blur(5px);
+        opacity: 0.5;
+        z-index: -1;
+    }
     @media (min-width: 1024px) {
         .content {
             display: flex;
@@ -189,11 +113,77 @@ title: Index
         }
 
         .content p {
-            width: 50%;
+            width: 80%;
             margin: 0;
             text-align: justify;
         }
     }
+  .event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 20px;
+  }
+
+  .event {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .event:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .event-content {
+    padding: 1.5rem;
+  }
+
+  .event h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem;
+    color: #333;
+  }
+
+  .event h2 a {
+    color: #2b6cb0;
+    text-decoration: none;
+  }
+
+  .event h2 a:hover {
+    color: #1a4971;
+    text-decoration: underline;
+  }
+
+  .event p {
+    margin: 0 0 0.75rem;
+    color: #555;
+    font-size: 0.9rem;
+  }
+
+  .event img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .event-list {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .event h2 {
+      font-size: 1.1rem;
+    }
+
+    /* .event img {
+      height: 120px;
+    } */
+  }
 </style>
 
 <script>
@@ -243,4 +233,4 @@ title: Index
 
     // Start the slider
     startAutoSlide();
-</script>ƒ
+</script>

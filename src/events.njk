@@ -4,21 +4,20 @@ title: All Events
 permalink: /events/
 ---
 <h1 style="text-align: center; padding: 80px; ">{{ title }}</h1>
+<h1 style="text-align: center; padding: 80px; ">4th Executive Committee Events</h1>
 
 <div class="event-list">
-  {% for event in collections.events %}
-    {% if '2nd EC' not in event.data.tags and '3rd EC' not in event.data.tags %}
-      <div class="event">
-        {% if event.data.images and event.data.images[0] %}
-        <img src="{{ event.data.featured }}" alt="{{ event.data.title }} image">
-        {% endif %}
-        <div class="event-content">
-          <h2><a href="{{ event.url }}">{{ event.data.title }}</a></h2>
-          <!-- <p>Date: {{ event.data.date }}</p> -->
-          <p>{{ event.data.description }}</p>
-        </div>
-      </div>
+  {% for event in collections.events_4thEC %}
+  <div class="event">
+    {% if event.data.images and event.data.images[0] %}
+    <img src="{{ event.data.featured[0] }}" alt="{{ event.data.title }} image">
     {% endif %}
+    <div class="event-content">
+      <h2><a href="{{ event.url }}">{{ event.data.title }}</a></h2>
+      <!-- <p>Date: {{ event.data.date }}</p> -->
+      <p>{{ event.data.description }}</p>
+    </div>
+  </div>
   {% endfor %}
 </div>
 
@@ -28,7 +27,7 @@ permalink: /events/
   {% for event in collections.events_3rdEC %}
   <div class="event">
     {% if event.data.images and event.data.images[0] %}
-    <img src="{{ event.data.featured }}" alt="{{ event.data.title }} image">
+    <img src="{{ event.data.featured[0] }}" alt="{{ event.data.title }} image">
     {% endif %}
     <div class="event-content">
       <h2><a href="{{ event.url }}">{{ event.data.title }}</a></h2>
@@ -45,7 +44,7 @@ permalink: /events/
   {% for event in collections.events_2ndEC %}
   <div class="event">
     {% if event.data.images and event.data.images[0] %}
-    <img src="{{ event.data.featured }}" alt="{{ event.data.title }} image">
+    <img src="{{ event.data.featured[0] }}" alt="{{ event.data.title }} image">
     {% endif %}
     <div class="event-content">
       <h2><a href="{{ event.url }}">{{ event.data.title }}</a></h2>

@@ -12,6 +12,10 @@ module.exports = function (eleventyConfig) {
         return collectionApi.getFilteredByTag("3rd EC");
     });
 
+    eleventyConfig.addCollection("events_4thEC", function (collectionApi) {
+        return collectionApi.getFilteredByTag("4th EC");
+    });
+
     // Passthrough copy for static assets
     eleventyConfig.addPassthroughCopy("src/css/");
     eleventyConfig.addPassthroughCopy("src/contents/");

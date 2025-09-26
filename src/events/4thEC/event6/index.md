@@ -5,13 +5,13 @@ date: 2025-08-02
 description: 
 
 featured:
-    - /events/event6/483768068_953317513578238_3703044566351405801_n.jpg
+    - /events/4thEC/event6/483768068_953317513578238_3703044566351405801_n.jpg
 images:
-    - /events/event6/483768068_953317513578238_3703044566351405801_n.jpg
+    - /events/4thEC/event6/483768068_953317513578238_3703044566351405801_n.jpg
 
 
 
-tags: events
+tags: 4th EC
 ---
 🎤 Step Into Your Power with RUPSA! 🎤
 Join us for an empowering weekly session:

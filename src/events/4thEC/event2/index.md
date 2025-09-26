@@ -5,22 +5,22 @@ date: 2025-06-15
 description: We are excited to announce the upcoming Asian Intervarsity Youth Conference (AIYC) 2025. Join us for inspiring talks, workshops, and networking opportunities with students from across Asia.
 
 featured:
-  - /events/event2/1.jpg 
+  - /events/4thEC/event2/1.jpg 
 
 images:
-  - /events/event2/2025-08-01_17.12.20.jpg
-  - /events/event2/2025-08-01_17.12.45.jpg
-  - /events/event2/2025-08-01_17.12.50.jpg 
-  - /events/event2/2025-08-01_17.12.54.jpg 
-  - /events/event2/2025-08-01_17.12.58.jpg 
-  - /events/event2/2025-08-01_17.13.02.jpg 
-  - /events/event2/2025-08-01_17.13.06.jpg 
-  - /events/event2/2025-08-01_17.13.09.jpg 
-  - /events/event2/2025-08-01_17.13.14.jpg 
-  - /events/event2/2025-08-01_17.13.17.jpg 
-  - /events/event2/2025-08-01_17.13.23.jpg 
-  - /events/event2/2025-08-01_17.13.26.jpg
-tags: events
+  - /events/4thEC/event2/2025-08-01_17.12.20.jpg
+  - /events/4thEC/event2/2025-08-01_17.12.45.jpg
+  - /events/4thEC/event2/2025-08-01_17.12.50.jpg 
+  - /events/4thEC/event2/2025-08-01_17.12.54.jpg 
+  - /events/4thEC/event2/2025-08-01_17.12.58.jpg 
+  - /events/4thEC/event2/2025-08-01_17.13.02.jpg 
+  - /events/4thEC/event2/2025-08-01_17.13.06.jpg 
+  - /events/4thEC/event2/2025-08-01_17.13.09.jpg 
+  - /events/4thEC/event2/2025-08-01_17.13.14.jpg 
+  - /events/4thEC/event2/2025-08-01_17.13.17.jpg 
+  - /events/4thEC/event2/2025-08-01_17.13.23.jpg 
+  - /events/4thEC/event2/2025-08-01_17.13.26.jpg
+tags: 4th EC
 ---
 
 # RUPSA Annual Intra-Year Championship 2025
