@@ -3,8 +3,7 @@ backend:
   repo: rupsaclub/rupsaclub.github.io
   branch: main
   auth_scope: repo
-  open_authoring: true
-  publish_mode: editorial_workflow
+
   commit_messages:
     create: "Create {{collection}} '{{slug}}'"
     update: "Update {{collection}} '{{slug}}'"
