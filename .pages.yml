@@ -34,7 +34,7 @@ content:
         type: image
         required: true
         options:
-          path: .
+          path: "src/events/{fields.slug}"
           multiple:
             max: 1
       - name: images
