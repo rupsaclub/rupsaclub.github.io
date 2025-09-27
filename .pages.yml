@@ -27,7 +27,8 @@ content:
         type: image
         options:
           path: .
-          multiple: false
+          multiple:
+            max: 1
       - name: images
         label: Additional Images
         type: image
