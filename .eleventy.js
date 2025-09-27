@@ -34,6 +34,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/events/**/*.avif");
     eleventyConfig.addPassthroughCopy("src/committee/");
     eleventyConfig.addPassthroughCopy("CNAME");
+    eleventyConfig.addPassthroughCopy(".nojekyll");
 
     // Return configuration options
     return {
