@@ -4,10 +4,11 @@ backend:
   branch: main
   auth_scope: repo
   open_authoring: true
+  publish_mode: editorial_workflow
   commit_messages:
-    create: "Create {{collection}} “{{slug}}”"
-    update: "Update {{collection}} “{{slug}}”"
-    delete: "Delete {{collection}} “{{slug}}”"
+    create: "Create {{collection}} '{{slug}}'"
+    update: "Update {{collection}} '{{slug}}'"
+    delete: "Delete {{collection}} '{{slug}}'"
 
 media_folder: "src/contents/images/uploads"
 public_folder: "/contents/images/uploads"
@@ -25,10 +26,20 @@ collections:
       depth: 2
       summary: "{{title}}"
     fields:
-      - { name: "layout", label: "Layout", widget: "hidden", default: "event.njk" }
+      - {
+          name: "layout",
+          label: "Layout",
+          widget: "hidden",
+          default: "event.njk",
+        }
       - { name: "title", label: "Title", widget: "string" }
       - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "description", label: "Description", widget: "text", required: false }
+      - {
+          name: "description",
+          label: "Description",
+          widget: "text",
+          required: false,
+        }
       - label: "Featured Image(s)"
         name: "featured"
         widget: "list"
@@ -57,7 +68,12 @@ collections:
       summary: "{{title}}"
     fields:
       - { name: "title", label: "Committee Year", widget: "string" }
-      - { name: "body", label: "Description / Details", widget: "markdown", required: false }
+      - {
+          name: "body",
+          label: "Description / Details",
+          widget: "markdown",
+          required: false,
+        }
 
   - name: "pages"
     label: "Pages"
@@ -66,19 +82,34 @@ collections:
         name: "about"
         file: "src/about.njk"
         fields:
-          - { name: "title", label: "Title", widget: "string", default: "About" }
+          - {
+              name: "title",
+              label: "Title",
+              widget: "string",
+              default: "About",
+            }
           - { name: "body", label: "Body", widget: "markdown" }
       - label: "Advisory Committee"
         name: "advisory"
         file: "src/advisory.njk"
         fields:
-          - { name: "title", label: "Title", widget: "string", default: "Advisory Committee" }
+          - {
+              name: "title",
+              label: "Title",
+              widget: "string",
+              default: "Advisory Committee",
+            }
           - { name: "body", label: "Body", widget: "markdown" }
       - label: "Contact"
         name: "contact"
         file: "src/contact.njk"
         fields:
-          - { name: "title", label: "Title", widget: "string", default: "Contact" }
+          - {
+              name: "title",
+              label: "Title",
+              widget: "string",
+              default: "Contact",
+            }
           - { name: "body", label: "Body", widget: "markdown" }
       - label: "FAQs"
         name: "faqs"
