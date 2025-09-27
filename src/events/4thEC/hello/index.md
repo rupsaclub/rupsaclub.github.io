@@ -1,6 +1,6 @@
 ---
 layout: event.njk
-title: hellox
+title: hello
 description: new
 featured: /events/4thEC/hello/Untitled.png
 images:
