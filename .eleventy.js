@@ -30,6 +30,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/css/");
     eleventyConfig.addPassthroughCopy("src/contents/");
     eleventyConfig.addPassthroughCopy("src/events/**/*.jpg");
+    eleventyConfig.addPassthroughCopy("src/events/**/*.jpeg");
     eleventyConfig.addPassthroughCopy("src/events/**/*.png");
     eleventyConfig.addPassthroughCopy("src/events/**/*.avif");
     eleventyConfig.addPassthroughCopy("src/committee/");
