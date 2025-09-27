@@ -4,11 +4,13 @@ backend:
   branch: main
   auth_scope: repo
   open_authoring: true
-  publish_mode: editorial_workflow
+
   commit_messages:
     create: "Create {{collection}} '{{slug}}'"
     update: "Update {{collection}} '{{slug}}'"
     delete: "Delete {{collection}} '{{slug}}'"
+
+publish_mode: editorial_workflow
 
 media_folder: "src/contents/images/uploads"
 public_folder: "/contents/images/uploads"
