@@ -1,20 +1,30 @@
+const fs = require("fs");
+const path = require("path");
+
 module.exports = function (eleventyConfig) {
     // Create a collection for events based on the 'events' tag
     eleventyConfig.addCollection("events", function (collectionApi) {
         return collectionApi.getFilteredByTag("events");
     });
 
-    eleventyConfig.addCollection("events_2ndEC", function (collectionApi) {
-        return collectionApi.getFilteredByTag("2nd EC");
-    });
+    // Dynamically create collections for each EC directory in src/events
+    const eventsDir = path.join(__dirname, 'src', 'events');
+    try {
+        const ecFolders = fs.readdirSync(eventsDir, { withFileTypes: true })
+            .filter(dirent => dirent.isDirectory())
+            .map(dirent => dirent.name);
 
-    eleventyConfig.addCollection("events_3rdEC", function (collectionApi) {
-        return collectionApi.getFilteredByTag("3rd EC");
-    });
+        ecFolders.forEach(folder => {
+            const collectionName = `events_${folder}`;
+            const tagName = folder.replace('EC', ' EC');
+            eleventyConfig.addCollection(collectionName, function(collectionApi) {
+                return collectionApi.getFilteredByTag(tagName);
+            });
+        });
+    } catch (error) {
+        console.error("Could not read EC directories for collections.", error);
+    }
 
-    eleventyConfig.addCollection("events_4thEC", function (collectionApi) {
-        return collectionApi.getFilteredByTag("4th EC");
-    });
 
     // Passthrough copy for static assets
     eleventyConfig.addPassthroughCopy("src/css/");
