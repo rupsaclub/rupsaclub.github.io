@@ -1,14 +1,19 @@
 backend:
-  name: git-gateway
-  branch: main # adjust if your repo default branch is different
+  name: github
+  repo: rupsaclub/rupsaclub.github.io
+  branch: main
+  auth_scope: repo
+  commit_messages:
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
 
-media_folder: "src/contents/images/uploads"   # where images get committed in repo
-public_folder: "/contents/images/uploads"     # public URL used in frontmatter
+media_folder: "src/contents/images/uploads"
+public_folder: "/contents/images/uploads"
 
 site_url: "https://rupsaclub.github.io"
 
 collections:
-  # EVENTS
   - name: "events"
     label: "Events"
     label_singular: "Event"
@@ -41,7 +46,6 @@ collections:
         default: "4th EC"
       - { label: "Body", name: "body", widget: "markdown" }
 
-  # COMMITTEE MEMBERS
   - name: "committee"
     label: "Committees"
     folder: "src/committee"
@@ -54,7 +58,6 @@ collections:
       - { name: "title", label: "Committee Year", widget: "string" }
       - { name: "body", label: "Description / Details", widget: "markdown", required: false }
 
-  # STATIC PAGES (About, Contact, etc.)
   - name: "pages"
     label: "Pages"
     files:
