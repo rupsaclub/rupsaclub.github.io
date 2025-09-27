@@ -2,7 +2,7 @@ content:
   - name: events
     label: Events
     path: src/events
-    filename: '{fields.slug}/index.md'
+    filename: '{fields.title}/index.md'
     type: collection
     view:
       fields: [title, date, tags]
@@ -12,10 +12,6 @@ content:
         type: string
         default: event.njk
         hidden: true
-      - name: slug
-        label: Slug
-        type: string
-        required: true
       - name: title
         label: Title
         type: string
@@ -34,7 +30,7 @@ content:
         type: image
         required: true
         options:
-          path: 'src/events/{fields.slug}'
+          path: src/events/{fields.title}
           multiple:
             max: 1
       - name: images
