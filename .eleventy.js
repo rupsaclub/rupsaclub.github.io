@@ -33,6 +33,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/events/**/*.png");
     eleventyConfig.addPassthroughCopy("src/events/**/*.avif");
     eleventyConfig.addPassthroughCopy("src/committee/");
+    eleventyConfig.addPassthroughCopy("CNAME");
 
     // Return configuration options
     return {
