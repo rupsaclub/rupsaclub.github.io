@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs</title>
+    <!-- FONTS [JOST, TIRO] -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/posts.css">
+</head>
+
+<body>
+    <link rel="stylesheet" href="/css/header.css">
+<header>
+    <div class="nav-title">
+        <img src="/contents/images/logo.png" alt="RUPSA Logo">
+    </div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="nav">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/about/">ABOUT</a></li>
+        <li class="team-item">
+            <a href="javascript:void(0)" class="team-link" aria-expanded="false">TEAM</a>
+            <ul class="dropdown">
+                <li><a href="/committee/4th/">4th Committee</a></li>
+                <li><a href="/committee/4thW/">4th Extended Committee</a></li>
+                <li><a href="/committee/3rd/">3rd Committee</a></li>
+                <li><a href="/committee/3rdW">3rd Extended Committee</a></li>
+                <li><a href="/committee/2nd">2nd Committee</a></li>
+            </ul>
+        </li>
+        <li><a href="/advisory/">ADVISORY PANEL</a></li>
+        <li><a href="/events/">EVENTS</a></li>
+        <li><a href="/faqs/">FAQs</a></li>
+        <li><a href="/contact/">CONTACT</a></li>
+    </ul>
+</header>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+        const teamLink = document.querySelector('.team-link');
+        const dropdown = document.querySelector('.dropdown');
+
+        // Hamburger menu toggle
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', nav.classList.contains('active'));
+        });
+
+        // Team dropdown toggle on mobile
+        teamLink.addEventListener('click', (e) => {
+            if (window.innerWidth <= 767) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+                teamLink.setAttribute('aria-expanded', dropdown.classList.contains('active'));
+            }
+        });
+
+        // Close dropdown and nav when clicking a nav link on mobile
+        document.querySelectorAll('.nav a:not(.team-link)').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 767) {
+                    nav.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    dropdown.classList.remove('active');
+                    teamLink.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.team-item') && !e.target.closest('.dropdown')) {
+                dropdown.classList.remove('active');
+                teamLink.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+</script>
+    <main>
+        
+<h1 style="text-align: center; padding: 80px; ">FAQs</h1>
+
+<pre style="white-space: pre-wrap; font-size: 1.2em; padding: 25px;">
+Frequently Asked Questions (FAQs)
+
+1. What is RUPSA?
+RUPSA (Rajshahi University Philosophy Students’ Association) is the official student organization of the Department of Philosophy at the University of Rajshahi. It promotes academic, cultural, and social engagement among philosophy students.
+
+2. Who can join RUPSA?
+All students currently enrolled in the Department of Philosophy, University of Rajshahi, are eligible to become members. Participation in activities is open to all, regardless of year or background.
+
+3. How does RUPSA benefit philosophy students?
+RUPSA offers students opportunities for leadership, academic growth, debate and dialogue, publication, community engagement, and networking. It bridges the gap between classroom learning and real-world philosophical application.
+
+4. What kind of events does RUPSA organize?
+RUPSA organizes seminars, public lectures, debates, workshops, cultural events, philosophical commemorations, field activities, and student-led roundtables on contemporary issues.
+
+5. Does RUPSA collaborate with other organizations?
+Yes. RUPSA maintains partnerships with student clubs, civil society platforms, academic institutions, and NGOs—both within and beyond the University of Rajshahi.
+
+6. Can students from other departments participate in RUPSA’s programs?
+While membership is specific to Philosophy students, many of our events—such as lectures, debates, and workshops—are open to the wider university community.
+
+7. How can I stay informed about upcoming RUPSA events and initiatives?
+You can follow our official Facebook page, check the announcements section of this website, or join our email list for regular updates.
+
+8. Who leads RUPSA?
+RUPSA is led by an elected Executive Committee, composed of students from various academic years, under the guidance of faculty advisors from the Department of Philosophy.
+
+9. How can I contribute to RUPSA’s activities?
+Whether it’s writing for our publications, volunteering at events, or proposing new initiatives, there are many ways to get involved. Reach out to any committee member or use the contact form on our website.
+
+10. Is RUPSA affiliated with any political group?
+No. RUPSA is a non-partisan, student-run academic association. We are committed to intellectual independence and do not operate under any political party or agenda.
+</pre>
+    </main>
+    <link rel="stylesheet" href="/css/footer.css">
+<!-- ICONS [BOOTSTRAP] -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css?v=1.11.3">
+<link rel="stylesheet" href="/css/social-links.css">
+<footer id="footer">
+    <!-- Social Media Links -->
+    <div style="justify-content: center; display: flex;">
+        <a class="icon-button" href="https://www.facebook.com/share/1BBfNa76xf/" target="_blank">
+            <div class="circle"></div> <i class="icon bi bi-facebook large"></i>
+        </a>
+        <a class="icon-button" href="https://youtube.com/@rupsarubd?si=HdUlJIZFzgN28Ple" target="_blank">
+            <div class="circle"></div> <i class="icon bi bi-youtube large"></i>
+        </a>
+        <details>
+            <summary>
+                <div class="icon-button">
+                    <div class="circle"></div> <i class="icon bi bi-envelope large"></i>
+                </div>
+            </summary>
+            <ul>
+                <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=bdrupsa@gmail.com">Gmail</a></li>
+                <li><a href="https://compose.mail.yahoo.com/?to=bdrupsa@gmail.com">Yahoo Mail</a></li>
+                <li><a href="https://outlook.office.com/mail/deeplink/compose?to=bdrupsa@gmail.com">Outlook</a>
+                </li>
+            </ul>
+        </details>
+    </div>
+    <div class="footer-content">
+        <p>Rajshahi University Philosophy Students' Alliance (RUPSA) is a student oriented non-profit and
+            non-political voluntary organization initiated by the students of Philosophy Department with a motto
+            of "United to Ignite"</p>
+        <p>
+            <a href="/faqs/">FAQs</a>
+            <a href="/about/">ABOUT</a>
+            <a href="/contact/">CONTACT US</a>
+        </p>
+    </div>
+</footer>
+<div class="copyright">
+    Copyright © 2025 RUPSA. All rights reserved.
+</div>
+</body>
+
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <!-- FONTS [JOST, TIRO] -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Bangla:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/posts.css">
+</head>
+
+<body>
+    <link rel="stylesheet" href="/css/header.css">
+<header>
+    <div class="nav-title">
+        <img src="/contents/images/logo.png" alt="RUPSA Logo">
+    </div>
+    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">☰</button>
+    <ul class="nav">
+        <li><a href="/">HOME</a></li>
+        <li><a href="/about/">ABOUT</a></li>
+        <li class="team-item">
+            <a href="javascript:void(0)" class="team-link" aria-expanded="false">TEAM</a>
+            <ul class="dropdown">
+                <li><a href="/committee/4th/">4th Committee</a></li>
+                <li><a href="/committee/4thW/">4th Extended Committee</a></li>
+                <li><a href="/committee/3rd/">3rd Committee</a></li>
+                <li><a href="/committee/3rdW">3rd Extended Committee</a></li>
+                <li><a href="/committee/2nd">2nd Committee</a></li>
+            </ul>
+        </li>
+        <li><a href="/advisory/">ADVISORY PANEL</a></li>
+        <li><a href="/events/">EVENTS</a></li>
+        <li><a href="/faqs/">FAQs</a></li>
+        <li><a href="/contact/">CONTACT</a></li>
+    </ul>
+</header>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+        const teamLink = document.querySelector('.team-link');
+        const dropdown = document.querySelector('.dropdown');
+
+        // Hamburger menu toggle
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            hamburger.setAttribute('aria-expanded', nav.classList.contains('active'));
+        });
+
+        // Team dropdown toggle on mobile
+        teamLink.addEventListener('click', (e) => {
+            if (window.innerWidth <= 767) {
+                e.preventDefault();
+                dropdown.classList.toggle('active');
+                teamLink.setAttribute('aria-expanded', dropdown.classList.contains('active'));
+            }
+        });
+
+        // Close dropdown and nav when clicking a nav link on mobile
+        document.querySelectorAll('.nav a:not(.team-link)').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 767) {
+                    nav.classList.remove('active');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                    dropdown.classList.remove('active');
+                    teamLink.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.closest('.team-item') && !e.target.closest('.dropdown')) {
+                dropdown.classList.remove('active');
+                teamLink.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+</script>
+    <main>
+        <!-- main.html -->
+<link rel="stylesheet" href="../css/slideshow.css">
+
+<div class="slider-container">
+    <div class="slides">
+        <div class="slide">
+            <img src="/contents/images/slideshow/s1.jpg" alt="Slide 1">
+        </div>
+        <div class="slide">
+            <img src="/contents/images/slideshow/s2.jpg" alt="Slide 2">
+        </div>
+        <div class="slide">
+            <img src="/contents/images/slideshow/s3.jpg" alt="Slide 3">
+        </div>
+    </div>
+    <div class="controls">
+        <button class="control-btn prev">❮</button>
+        <button class="control-btn next">❯</button>
+    </div>
+</div>
+
+
+<div class="content">
+    <p style="text-align: justify; margin: 20px; font-size: 24px; text-align: center;">
+        <img src="contents/images/logo.png" alt="RUPSA Logo" style="height: 80px;">
+        <br><br>
+        <span style="font-weight: bold; font-size: 64px;">RUPSA</span>
+        <br><br>
+        <span style="font-weight: bold; font-size: 32px;">Rajshahi University Philosophy Students’ Alliance</span>
+        <br><br>
+        Welcome to RUPSA. RUPSA is a student oriented non-profit and non-political
+        voluntary organisation initiated by the students of Philosophy Department.
+        <br><br>
+        Our motto is "united to ignite."
+    </p>
+</div>
+
+
+<div style="text-align: center; font-size: 42px; background-color: #0ca7d5; padding: 8px 0;">Recent Events</div>
+
+<div class="event-list">
+    
+    
+    
+    <div class="event">
+        
+        <img src="/events/4thEC/event10/545772693_1087016433541678_2405959055820118344_n.jpg" alt="RUPSA Annual Intra-Year Championship 2025 image">
+        
+        <div class="event-content">
+            <h2><a href="/events/4thEC/event10/">RUPSA Annual Intra-Year Championship 2025</a></h2>
+            <!-- <p>Date: Wed Jan 01 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</p> -->
+            <p>Highlights from the RUPSA Annual Intra-Year Championship 2025 formal ceremony.</p>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="event">
+        
+        <img src="/events/4thEC/event9/548289516_1091522183091103_4479975923058032673_n.jpg" alt="RUPSA Cultural Night 2025 image">
+        
+        <div class="event-content">
+            <h2><a href="/events/4thEC/event9/">RUPSA Cultural Night 2025</a></h2>
+            <!-- <p>Date: Wed Jan 01 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</p> -->
+            <p>Glimpses from RUPSA Cultural Night 2025 — an evening of songs, dances, and poetry that brought our community together in joy and harmony.</p>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="event">
+        
+        <img src="/events/4thEC/event2/1.jpg" alt="RUPSA Annual Intra-Year Championship 2025 image">
+        
+        <div class="event-content">
+            <h2><a href="/events/4thEC/event2/">RUPSA Annual Intra-Year Championship 2025</a></h2>
+            <!-- <p>Date: Sun Jun 15 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</p> -->
+            <p>We are excited to announce the upcoming Asian Intervarsity Youth Conference (AIYC) 2025. Join us for inspiring talks, workshops, and networking opportunities with students from across Asia.</p>
+        </div>
+    </div>
+    
+    
+    
+    
+    <div class="event">
+        
+        <img src="/events/4thEC/event1/525479823_1054655706777751_6641958892061028942_n.jpg" alt="49th BCS Strategic Short-Term Preparation for Maximum Results image">
+        
+        <div class="event-content">
+            <h2><a href="/events/4thEC/event1/">49th BCS Strategic Short-Term Preparation for Maximum Results</a></h2>
+            <!-- <p>Date: Sat Aug 02 2025 00:00:00 GMT+0000 (Coordinated Universal Time)</p> -->
+            <p></p>
+        </div>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+
+
+<!-- <div style="margin-bottom: 100px; margin-top: 100px;"></div> -->
+
+
+<div style="text-align: center; font-size: 42px; background-color: #0ca7d5; padding: 8px 0;">Achievements</div>
+<div style="margin-bottom: 10px; margin-top: 10px;"></div>
+
+<div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;">
+    <img src="../contents/images/achievements/1.jpg" alt="a 1" style="max-width: 300px; height: auto;">
+    <img src="../contents/images/achievements/2.jpg" alt="A 2" style="max-width: 300px; height: auto;">
+    <img src="../contents/images/achievements/3.jpg" alt="a 3" style="max-width: 300px; height: auto;">
+    <img src="../contents/images/achievements/4.jpg" alt="a 4" style="max-width: 300px; height: auto;">
+    <img src="../contents/images/achievements/5.jpg" alt="a 5" style="max-width: 300px; height: auto;">
+    <img src="../contents/images/achievements/6.jpg" alt="a 6" style="max-width: 300px; height: auto;">
+    <img src="../contents/images/achievements/7.jpg" alt="a 7" style="max-width: 300px; height: auto;">
+    <img src="../contents/images/achievements/8.jpg" alt="a 8" style="max-width: 300px; height: auto;">
+    <img src="../contents/images/achievements/9.jpg" alt="a 9" style="max-width: 300px; height: auto;">
+</div>
+
+<div style="margin-bottom: 10px; margin-top: 10px;"></div>
+
+
+<style>
+    .content {
+        position: relative;
+        z-index: 1;
+    }
+    .content::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('/contents/images/slideshow/front_blur.jpg');
+        background-size: cover;
+        background-position: center;
+        filter: blur(5px);
+        opacity: 0.5;
+        z-index: -1;
+    }
+    @media (min-width: 1024px) {
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* Full viewport height */
+        }
+
+        .content p {
+            width: 80%;
+            margin: 0;
+            text-align: justify;
+        }
+    }
+  .event-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    padding: 20px;
+  }
+
+  .event {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .event:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .event-content {
+    padding: 1.5rem;
+  }
+
+  .event h2 {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem;
+    color: #333;
+  }
+
+  .event h2 a {
+    color: #2b6cb0;
+    text-decoration: none;
+  }
+
+  .event h2 a:hover {
+    color: #1a4971;
+    text-decoration: underline;
+  }
+
+  .event p {
+    margin: 0 0 0.75rem;
+    color: #555;
+    font-size: 0.9rem;
+  }
+
+  .event img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    display: block;
+  }
+
+  @media (max-width: 768px) {
+    .event-list {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .event h2 {
+      font-size: 1.1rem;
+    }
+
+    /* .event img {
+      height: 120px;
+    } */
+  }
+</style>
+
+<script>
+    const slides = document.querySelector('.slides');
+    const slideElements = document.querySelectorAll('.slide');
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    let currentIndex = 0;
+    const totalSlides = slideElements.length;
+    let autoSlide;
+
+    function updateSlidePosition() {
+        slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        updateSlidePosition();
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+        updateSlidePosition();
+    }
+
+    // Auto-play
+    function startAutoSlide() {
+        autoSlide = setInterval(nextSlide, 3000); // Change slide every 3 seconds
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlide);
+    }
+
+    // Manual controls
+    nextBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        nextSlide();
+        startAutoSlide();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        stopAutoSlide();
+        prevSlide();
+        startAutoSlide();
+    });
+
+    // Start the slider
+    startAutoSlide();
+</script>
+    </main>
+    <link rel="stylesheet" href="/css/footer.css">
+<!-- ICONS [BOOTSTRAP] -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css?v=1.11.3">
+<link rel="stylesheet" href="/css/social-links.css">
+<footer id="footer">
+    <!-- Social Media Links -->
+    <div style="justify-content: center; display: flex;">
+        <a class="icon-button" href="https://www.facebook.com/share/1BBfNa76xf/" target="_blank">
+            <div class="circle"></div> <i class="icon bi bi-facebook large"></i>
+        </a>
+        <a class="icon-button" href="https://youtube.com/@rupsarubd?si=HdUlJIZFzgN28Ple" target="_blank">
+            <div class="circle"></div> <i class="icon bi bi-youtube large"></i>
+        </a>
+        <details>
+            <summary>
+                <div class="icon-button">
+                    <div class="circle"></div> <i class="icon bi bi-envelope large"></i>
+                </div>
+            </summary>
+            <ul>
+                <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=bdrupsa@gmail.com">Gmail</a></li>
+                <li><a href="https://compose.mail.yahoo.com/?to=bdrupsa@gmail.com">Yahoo Mail</a></li>
+                <li><a href="https://outlook.office.com/mail/deeplink/compose?to=bdrupsa@gmail.com">Outlook</a>
+                </li>
+            </ul>
+        </details>
+    </div>
+    <div class="footer-content">
+        <p>Rajshahi University Philosophy Students' Alliance (RUPSA) is a student oriented non-profit and
+            non-political voluntary organization initiated by the students of Philosophy Department with a motto
+            of "United to Ignite"</p>
+        <p>
+            <a href="/faqs/">FAQs</a>
+            <a href="/about/">ABOUT</a>
+            <a href="/contact/">CONTACT US</a>
+        </p>
+    </div>
+</footer>
+<div class="copyright">
+    Copyright © 2025 RUPSA. All rights reserved.
+</div>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 70%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.footer-content p:first-child {
+    margin-bottom: 15px;
+}
+
+.footer-content p a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.copyright {
+    text-align: center;
+    background-color: #000000;
+    color: #f0fbff;
+    padding: 15px 0;
+}
