@@ -2,7 +2,7 @@ content:
   - name: events
     label: Events
     path: src/events
-    filename: '{fields.title}/index.md'
+    filename: '{fields.slug}/index.md'
     type: collection
     view:
       fields: [title, date, tags]
@@ -11,12 +11,19 @@ content:
         label: Layout
         type: string
         default: event.njk
+        hidden: true
+      - name: slug
+        label: Slug
+        type: string
+        required: true
       - name: title
         label: Title
         type: string
+        required: true
       - name: date
         label: Event Date
         type: date
+        required: true
         options:
           format: yyyy-MM-dd
       - name: description
@@ -25,6 +32,7 @@ content:
       - name: featured
         label: Featured Image
         type: image
+        required: true
         options:
           path: .
           multiple:
@@ -32,21 +40,23 @@ content:
       - name: images
         label: Additional Images
         type: image
+        required: true
         options:
           path: .
-          # Or if you want to limit the number of images:
           multiple:
             max: 20
       - name: tags
         label: Tags
         type: select
+        required: true
         options:
           values: ["2nd EC", "3rd EC", "4th EC", "5th EC"]
           multiple: false
           creatable: true
-      - name: body
-        label: Event Details
+      - name: content
+        label: Content
         type: rich-text
+        required: true
 media:
   input: src/events
   output: /events
