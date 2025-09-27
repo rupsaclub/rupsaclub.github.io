@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: main # adjust if your repo default branch is different
+
+media_folder: "src/contents/images/uploads"   # where images get committed in repo
+public_folder: "/contents/images/uploads"     # public URL used in frontmatter
+
+site_url: "https://rupsaclub.github.io"
+
+collections:
+  # EVENTS
+  - name: "events"
+    label: "Events"
+    label_singular: "Event"
+    folder: "src/events"
+    create: true
+    slug: "{{slug}}"
+    nested:
+      depth: 2
+      summary: "{{title}}"
+    fields:
+      - { name: "layout", label: "Layout", widget: "hidden", default: "event.njk" }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "description", label: "Description", widget: "text", required: false }
+      - label: "Featured Image(s)"
+        name: "featured"
+        widget: "list"
+        field: { label: "Image", name: "image", widget: "image" }
+      - label: "Gallery Images"
+        name: "images"
+        widget: "list"
+        field: { label: "Image", name: "image", widget: "image" }
+      - label: "Tags / Committee Year"
+        name: "tags"
+        widget: "select"
+        options:
+          - { label: "2nd EC", value: "2nd EC" }
+          - { label: "3rd EC", value: "3rd EC" }
+          - { label: "4th EC", value: "4th EC" }
+        default: "4th EC"
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  # COMMITTEE MEMBERS
+  - name: "committee"
+    label: "Committees"
+    folder: "src/committee"
+    create: true
+    slug: "{{slug}}"
+    nested:
+      depth: 1
+      summary: "{{title}}"
+    fields:
+      - { name: "title", label: "Committee Year", widget: "string" }
+      - { name: "body", label: "Description / Details", widget: "markdown", required: false }
+
+  # STATIC PAGES (About, Contact, etc.)
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "About"
+        name: "about"
+        file: "src/about.njk"
+        fields:
+          - { name: "title", label: "Title", widget: "string", default: "About" }
+          - { name: "body", label: "Body", widget: "markdown" }
+      - label: "Advisory Committee"
+        name: "advisory"
+        file: "src/advisory.njk"
+        fields:
+          - { name: "title", label: "Title", widget: "string", default: "Advisory Committee" }
+          - { name: "body", label: "Body", widget: "markdown" }
+      - label: "Contact"
+        name: "contact"
+        file: "src/contact.njk"
+        fields:
+          - { name: "title", label: "Title", widget: "string", default: "Contact" }
+          - { name: "body", label: "Body", widget: "markdown" }
+      - label: "FAQs"
+        name: "faqs"
+        file: "src/faqs.njk"
+        fields:
+          - { name: "title", label: "Title", widget: "string", default: "FAQs" }
+          - { name: "body", label: "Body", widget: "markdown" }
