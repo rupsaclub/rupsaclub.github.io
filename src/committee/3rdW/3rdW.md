@@ -26,4 +26,3 @@ images:
   - /committee/3rdW/22.jpg
   - /committee/3rdW/23.jpg
 ---
-sss

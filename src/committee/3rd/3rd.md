@@ -21,4 +21,3 @@ images:
   - /committee/3rd/17.jpg
   - /committee/3rd/18.jpg
 ---
-sss

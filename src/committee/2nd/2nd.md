@@ -46,4 +46,3 @@ images:
   - /committee/2nd/42.jpg
   - /committee/2nd/43.jpg
 ---
-sss
